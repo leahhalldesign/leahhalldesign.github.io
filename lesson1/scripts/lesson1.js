@@ -4,10 +4,11 @@ localStorage.lastName = "Hall";
 let firstName = localStorage.getItem('firstName');
 let lastName = localStorage.lastname;
 
-
 if (localStorage.clickcount) {
     localStorage.clickcount = Number(localStorage.clickcount) + 1;
-} else {
+  } else {
     localStorage.clickcount = 1;
-}
-document.getElementById("result").innerHTML = "You have clicked on "
+  }
+  document.getElementById("result").innerHTML = "You have clicked the button " +
+  localStorage.clickcount + " time(s).";
+
