@@ -1,0 +1,20 @@
+ul {
+    list-style: none;
+}
+ul li:first-child {
+    display: block;
+}
+ul li {
+    display: none;
+}
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: pink;
+    border: 1px solid grey;
+}
+
+.show li {
+    display: block;
+}
