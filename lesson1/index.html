@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li><a href="#" id="menu">&equiv; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson1/">Lesson 1</a></li>
+                <li><a href="lesson2/">Lesson 2</a></li>
+                <li><a href="lesson3/">Lesson 3</a></li>
+                <li><a href="lesson4/">Lesson 4</a></li>
+                <li><a href="lesson5/">Lesson 5</a></li>
+                <li><a href="lesson6/">Lesson 6</a></li>
+            </ul>
+        </nav>
+        <h1>Lesson 01</h1>
+    </header>
+    <main>
+        <h2>Notes</h2>
+        <p>localStorage is a way to store information on a page that a user has input, even when they refresh the page. localStorage can also store the information until they come back later.</p>
+        <p>'var' is a variable that you want to lable a group of objects as. It's can be compared to a box filled with similar/the same item that is labeled so that you can easily find that item later.</p>
+        <p>When you declare a variable and tell it to get a certain element (getElementById/querySelector), you are asking it to grab that specific element, take what's inside of it, and store that information into the variable.</p>
+        <h2>Code Examples</h2>
+        <code>
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You have clicked the button " +
+            localStorage.clickcount + " time(s).";
+        </code>
+        <h3>
+           <span id="result"></span>
+        </h3>
+    </main>
+    <footer>
+        &copy; 2020 | Portfolio | Leah Hall
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/lesson1.js"></script>
+</body>
+</html>

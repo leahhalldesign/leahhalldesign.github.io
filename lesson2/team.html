@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Activity</title>
+</head>
+<body>
+    <h1>Team Activity</h1>
+    <h2>01</h2>
+    <input id="input1" type="text">
+    <button onclick="function1()">Submit</button>
+    <div id="output1"></div>
+    <script>
+        function function1() {
+            const input = document.querySelector('#input1').value;
+            const output = document.querySelector('#output1');
+            output.innerHTML = 'You said: ' + input;
+        }
+    </script>
+
+    <h2>02</h2>
+    <input id="input2" type="text">
+    <button onclick="function2()">Add Sum</button>
+    <div id="output2"></div>
+    <script>
+        function function2() {
+            const input = document.querySelector('#input2').value;
+            const output = document.querySelector('#output2');
+            const inputInt = parseInt(input);
+            if (inputInt !== NaN) {
+                output.innerHTML = 'Sum: ' + sum(inputInt);
+            }
+        }
+        function sum(number) {
+            let total = 0;
+            for (let i = 1; i <= number; i++) {
+                total += i;
+            }
+            return total;
+        }
+    </script>
+
+    <h2>03</h2>
+    <input id="input3" type="number"> +
+    <input id="input4" type="number">
+    <button onclick="equals()">+</button>
+    <div id="output3"></div>
+    <script>  
+        function equals() {
+            const number1 = document.querySelector('#input3').value;
+            const number2 = document.querySelector('#input4').value;
+            const output = document.querySelector('#output3');
+            const number1Out = parseFloat(number1);
+            const number2Out = parseFloat(number2);
+            if ((number1Out !== NaN) & (number2Out !== NaN)) {
+                const total = number1Out + number2Out;
+                output.innerHTML = 'Total: ' + total;
+            }
+        } 
+    </script>
+</body>
+</html>
