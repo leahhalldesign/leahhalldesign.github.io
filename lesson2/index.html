@@ -24,11 +24,147 @@
     </header>
     <main>
         <h2>Notes</h2>
-        <p></p>
-        <h2>Code Examples</h2>
-        <code>
+        <h2>Chapter 02</h2>
+        <h3>Comments</h3>
+            <p>Single line comments starting with //</p>
+        <code>// this is a short comment</code>
+            <p>Multi-line comments starting with /* and finishing with */</p>
+            <code>/* This is a longer comment
+                anything here will be ignored
+                This is a useful place to put notes
+                */</code>
+        <h3>Javascript Grammar</h3>
+            <p>It's best practice to use a ; at the end of a line of code. Blocks do not need to be terminated by a ; (a block is between {}.</p>
+        <h3>Primitive Data Types</h3>
+            <p>JavaScript has seven different data types. Six of them areprimitive data typesand are listed below:
+                <li>String</li>
+                <li>Symbol (The symbol primitive data type was only introduced in ES6.)</li>       
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>Undefined</li>
+                <li>Null</li>
+            </p>
+            <p>Any value that isn’t one of the primitive data types listed above is anobject. These include arrays, functions and object literals</p>
+        <h3>Declaring & Assigning</h3>
+            <p>JavaScript uses the keywords const and let to declare variables. The keyword const is used when the variable will not be reassigned to another value, whereas let is used if the variable might be reassigned later in the program.</p>
+            <p>You can enter a name into the console and it will tell you it's value (ex/ if you enter 'name' it will tell you 'Alexa')</p>
+            <p>You can even declare and assign multiple variables at the same time if you separate them with commas:
 
+                let x = 3, y = 4, z = 5;</p>
+            <p>Variables that have been declared using the let keyword can be reassigned to another value at some point later in the program. (ex/ if you used let score = 9; earlier, then you can change it to score = 5; later)</p>
+            <p>const cannot be reassigned (const name = 'Alexa'; name = 'Siri'; << TypeError: Assignment to constant variable.</p>
+            <p>You should try to use const to declare most variables unless you know that you'll need to change it later.</p>
+            <p>'let' replaced 'var'</p>
+        <h3>Scope</h3>
+            <p>A scope is the area in your code where a variable exists (is accessible by the program).</p>
+            <h4>Global Scope</h4>
+                <p>Global scope means that the variable was declared outside of a block and is accessible throughout the entire program. This is technically bad practice and should not be used often because you may forget which variables you've already declared later on in your code.</p>
+            <h4>Local Scope</h4>
+                <p>Local scope means that the variable was declared inside of a block so it is only available inside that block of code.</p>
+                <p>You can declare a variable inside and outside a block so that they have different values depending on where you pull it from.</p>
+        <h3>Naming Variables</h3>
+            <p>Camel case = firstNameAndLastName</p>
+            <p>Underscore = first_name_and_last_name</p>
+            <p>Camel case is preferred.</p>
+        <h3>Strings</h3>
+            <p>To create a string, just enter it between single quotes ('hello').</p>
+            <p>The backslash is used to escape special characters in strings such as:
+                Single quote marks \'           
+                Double quote marks \"           
+                End of line \n          
+                Carriage return \r          
+                Tab \t</p>
+        <h3>String Properties & Methods</h3>
+            <p>We can access the properties of a string using dot notation (name.length; // retrieve the name variable's length property
+                << 5)</p>
+            <p>An alternative notation you can use to access a primitive data type's properties are square brackets: (name['length']; // note the property name is in quote marks
+                << 5)</p>
+            <p>A method is an action that a primitive data type or object can perform. To call a method, we use the dot operator ( . ) followed by the name of the method, followed by parentheses (ex/ toUpperCase() )</p>
+            <p>Counting in JS starts at 0.</p>
+            <p>concat() method can be used to concatenate two or more strings together. A shortcut for string concatenation is to use the + operator to add the two strings together.</p>
+        <h3>Template Literals</h3>    
+            <p>Template literals use backticks (`) instead of '. This allows you to insert expressions inside a string.</p>
+        <h3>Numbers</h3>
+            <p>JavaScript doesn’t distinguish between integers and floating point decimals ― they are both given the type of 'number'</p>
+            <p>The toFixed() method rounds a number to a fixed number of decimal places.</p>
+            <p>Infinity is a special error value in JavaScript that is used to represent any number that is too big for the language to deal with. The biggest number that JavaScript can handle is 1.7976931348623157e+308</p>
+            <p>NaN = Not a Number.</p>
+            <h4>Parsing Numbers</h4>
+            <p>parseInt() can be used to convert a string representation of a numerical value back into a number. If a string starts with a number, the parseInt function will use this number and ignore any letters that come afterwards. And if you use parseInt with a decimal, it will remove anything after the decimal point.</p>
+            <p>There is also a similar function called parseFloat() that converts strings into floating point decimal numbers</p>
+        <h3>Undefined</h3>
+            <p>Undefined is the value given to variables that have not been assigned a value. </p>
+        <h3>Null</h3>
+        <p>Null means 'no value'. It can be thought of as a placeholder that JavaScript uses to say "there should be a value here, but there isn’t at the moment."</p>
+        <p>If this reminds you a lot of undefined then this is because they are both 'non-value' values, meaning they are similar, but behave slightly differently. For example, if you try to do sums with them:
+
+            10 + null; // null behaves like zero
+            << 10
+            10 + undefined; // undefined is not a number
+            << NaN</p>
+        <h3>Booleans</h3>
+            <p>There are only two Boolean values: true and false. To find the Boolean value of something, you can use the Boolean function like so:</p>
+            <p>Boolean('hello');
+                << true
+                Boolean(42);
+                << true
+                Boolean(0);
+                << false</p>
+        <h3>Logical Operators</h3>   
+                <p>! (Logical NOT): Placing the ! operator in front of a value will convert it to a Boolean and return the opposite value. So truthy values will return false, and falsy values will return true.</p>
+                <p>&& (Logical AND): The logical AND operator works on two or more values (the operands) and only evaluates to true ifallthe operands are truthy. The value that is returned is thelasttruthy value if they are all true, or thefirstfalsy value if at least one of them is false.</p>
+                <p>|| (Logical OR): The logical OR operator also works on two or more operands, but evaluates to true ifanyof the operands are true, so it only evaluates to false if both operands are falsy. The value that is returned is thefirsttruthy value if any of them are true, or thelastfalsy value if all of them are false.</p>
+        <h3>Equality</h3>  
+                <p>Soft Equality: returns true whether it's a string or a number. (==)</p>
+                <p>Hard Equality: only returns true if it's the exact answer. Hard equality (===) is the preferred method.</p>
+                <p>Inequality: !=</p>
+
+        <h2>Code Examples</h2>
+        <code>const question = "What is Superman's real name?"
+            const answer = prompt(question);
+            alert(`You answered ${answer}`);</code>
+        <code>
+            const name = 'Alexa'; // This won't be assigned to another string
+            let score = 0; // This value may change during the program
         </code>
+        <h3>Direct Assignment</h3>
+        <code>const a = 1;
+            let b = a; // a = 1, b = 1
+            b = 2; // a = 1, b = 2</code>
+        <h3>Assignment by Reference</h3>
+        <code>const c = { value: 1 };
+            let d = c; // c.value = 1, d.value = 1
+            d.value = 2; // c.value = 2, d.value = 2</code>
+        <h3>Strings & Methods</h3>
+        <code>'JavaScript'.concat('Ninja');
+            << 'JavaScriptNinja'
+            'Hello'.concat(' ','World','!');
+            << 'Hello World!'</code> or
+        <code>
+            'Java' + 'Script' + ' ' + 'Ninja';
+            << 'JavaScript Ninja'
+        </code>
+        <h3>Template Literals</h3>
+        <code>const age = 39;
+            `I will be ${ age + 1 } next year`;
+            << 'I will be 40 next year'</code>
+        <h3>Numbers</h3>
+        <code>5.0.toExponential(); >> "5e+0"</code>
+        <code>parseInt('1010',2); // converts from binary, back to decimal
+            << 10
+            parseInt('omg',36);
+            << 31912
+            parseInt('23',10);
+            << 23</code>
+        <code>parseFloat('2.9',10);
+            << 2.9</code>
+        <h3>Boolean</h3>
+        <code>Boolean('hello');
+            << true
+            Boolean(42);
+            << true
+            Boolean(0);
+            << false</code>
         <h2>Team Activity</h2>
         <a href="lesson2/team.html">Lesson 02 Team Activity</a>
     </main>
