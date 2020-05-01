@@ -24,7 +24,6 @@
     </header>
     <main>
         <h2>Notes</h2>
-        <h2>Chapter 02</h2>
         <h3>Comments</h3>
             <p>Single line comments starting with //</p>
         <code>// this is a short comment</code>
@@ -119,6 +118,50 @@
                 <p>Hard Equality: only returns true if it's the exact answer. Hard equality (===) is the preferred method.</p>
                 <p>Inequality: !=</p>
 
+        <h3>Arrays</h3>
+            <p>An array is an ordered list of values. To create an array literal, simply write a pair of square brackets (const heroes = [];).</p>
+            <p>To place the string 'Superman' inside the first element of our heroes array, we can assign it to element 0 , like so: heroes[0] = 'Superman';</p>
+            <p>Each item in an array can be treated like a variable. You can change the value using the assignment operator = . For example, we can change the value of the first item in the heroes array to 'Batman': heroes[0] = 'Batman';</p>
+            <p>We can add more values to our array by assigning them to other indices:
+                heroes[1] = 'Wonder Woman';
+                heroes[2] = 'Flash';</p>
+            <p>You don’t even have to use the same types of items inside an array. </p>
+            <p>The delete operator will remove an item from an array: delete avengers[3];</p>
+            <p>If we look at the avengers array, we can see that the fourth entry, 'Hulk' (with an index of 3 ), has indeed been removed ... but it has been replaced by a value of undefined.</p>
+            <p>Destructuring an array is the concept of taking values out of an array and presenting them as individual values. Destructuring allows us to assign multiple values at the same time, using arrays (const [x,y] = [1,2];)</p>
+            <p>If you make the array shorter than it already is, all the extra elements will be removed completely.</p>
+            <p>pop(): removes the last item of an array.</p>
+            <p>shift(): removes the first item of an array.</p>
+            <p>push(): appends a new value to the end of the array.</p>
+            <p>unshift(): appends a new item to the beginning of the array.</p>
+            <p>The concat() method can be used to merge an array with one or more arrays.</p>
+            <p>join(): can be used to turn the array into a string that comprises all the items in the array, separated by commas.</p>
+            <p>The slice() method creates a subarray; effectively chopping out a slice of an original array, starting at one position and finishing at another. For example, if we wanted to find the 3rd and 4th item in our array we would use the following code:
+
+                    avengers.slice(2,4) // starts at the third item (index of 2) and finishes at the fourth (the item with index 4 is not included)
+                    << ['Thor', 'Hulk']</p>
+            <p>The splice() method removes items from an array then inserts new items in their place. For example, the following code removes the string 'Hulk' and replaces it with 'Scarlett Witch'::
+
+                    avengers.splice(3, 1, 'Scarlet Witch');
+                    << ['Hulk']</p>
+            <p>reverse(): reverses the order of an array.</p>
+            <p>sort(): organizes the array alphabetically. Is permanent.</p>
+            <p>indexOf(): a method to find the first occurrence of a value in an array. If the item is in the array, it will return the index of the first occurrence of that item</p>
+        <h3>Sets</h3>
+            <p>An empty set is created using the new operator and Set() constructor: const list = new Set();</p>
+            <p>Values can be placed into a set using the add method: (list.add(1); << Set { 1 })</p>
+            <p>Multiple items can be added to the set by repeating the add() method: (list.add(2).add(3).add(4); << Set { 1, 2, 3, 4 })</p>
+        <h3>Functions</h3>
+            <p>All functions return a value, which can be specified using the return statement, which comes after the return keyword. A function that doesn’t explicitly return anything (such as all the examples we have seen so far) will return undefined by default.</p>
+            <p>To see an example of a function that uses parameters, we'll create a function that squares numbers. In the example that follows, the square function takes one parameter, x , which is the number to be squared. In the body of the function, the name of the parameter acts like a variable equal to the value that is provided when the function is invoked. As you can see, it is multiplied by itself and the result is returned by the function: function square(x){ return x*x;}</p>
+            <p>When we invoke this function, we need to provide an argument, which is the number to be squared:square(4.5);</p>
+            <p>arguments(): We can create a simple function called arguments() that will return the arguments object so we can see what it contains (function arguments(){ return arguments;}</p>
+            <p>arguments('hello', NaN); << { '0': 'hello', '1': NaN }</p>
+            <p>rest operator: can be used to deal with multiple arguments by creating an array of arguments that are available inside the body of the function.</p>
+            <p>To use the rest operator, simply place three dots in front of the last parameter in a function declaration. This will then collect all the arguments entered into an array. For example, the following function will have access to an array of all the arguments entered: function rest(...args){ return args; }</p>
+            
+
+
         <h2>Code Examples</h2>
         <code>const question = "What is Superman's real name?"
             const answer = prompt(question);
@@ -165,6 +208,31 @@
             << true
             Boolean(0);
             << false</code>
+        <h3>Arrays</h3>
+        <code>avengers.concat(['Hulk','Hawkeye', 'Black Widow']);
+            << ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow']</code>
+        <code>avengers.join(' & ');
+            << 'Captain America & Iron Man & Thor & Hulk & Hawkeye & Black Widow'</code>
+        <h3>Logic</h3>
+        <code>if (number === 4) {
+            console.log('You rolled a four');
+            } else if (number === 5) {
+            console.log('You rolled a five');
+            } else if(number === 6){
+            console.log('You rolled a six');
+            } else {
+            console.log('You rolled a number less than four');
+            }</code>
+        <h3>Functions</h3>
+        <code>function hello(){
+            console.log('Hello World!');
+        }</code>
+        <code>const goodbye = function(){
+            console.log('Goodbye World!');
+        };</code>
+        <code>const goodbye = function bye(){
+            console.log('Goodbye World!');
+        };</code>
         <h2>Team Activity</h2>
         <a href="lesson2/team.html">Lesson 02 Team Activity</a>
     </main>
