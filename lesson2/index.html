@@ -159,7 +159,14 @@
             <p>arguments('hello', NaN); << { '0': 'hello', '1': NaN }</p>
             <p>rest operator: can be used to deal with multiple arguments by creating an array of arguments that are available inside the body of the function.</p>
             <p>To use the rest operator, simply place three dots in front of the last parameter in a function declaration. This will then collect all the arguments entered into an array. For example, the following function will have access to an array of all the arguments entered: function rest(...args){ return args; }</p>
-            
+            <p>Hoisting is the JavaScript interpreter’s action of moving all variable and function declarations to the top of the current scope, regardless of where they are defined.</p>
+        <h3>Callbacks</h3>
+            <p>A function that is passed as an argument to another is known as a callback.</p>
+            <p>forEach(): This will loop through the array and invoke a callback function using each value as an argument. The callback function takes three parameters, the first represents the value in the array, the second represents the current index and the third represent the array that the callback is being called on. (ex/ colors.forEach( (color,index) = console.log(`Color at position ${index}  is ${color}`) ) <<  "Color at position 0 is Red" "Color at position 1 is Green" "Color at position 2 is Blue"</p>
+            <p>map(): very similar to the forEach() method. It also iterates over an array, and takes a callback function as a parameter that is invoked on each item in the array.</p>
+            <p>reduce(): another method that iterates over each value in the array, but this time it cumulatively combines each result to return just a single value.</p>
+            <p>filter(): returns a new array that only contains items from the original array that return true when passed to the callback. </p>
+
 
 
         <h2>Code Examples</h2>
@@ -233,6 +240,15 @@
         <code>const goodbye = function bye(){
             console.log('Goodbye World!');
         };</code>
+        <code>// function is invoked at the start of the code
+            hoist();
+// ...
+// ... lots more code here
+// ...
+// function definition is at the end of the code
+function hoist(){
+    console.log('Hoist Me!');
+}</code>
         <h2>Team Activity</h2>
         <a href="lesson2/team.html">Lesson 02 Team Activity</a>
     </main>
