@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo List</title>
+    <link rel="stylesheet" href="styles/todo.css">
+</head>
+<body>
+    <header>
+        <h1>Todos</h1>
+    </header>
+    <main>
+        <div id="todo">
+            <ul class="todos">
+                <input type="checkbox" class="todo" name="todo1" value="task">
+                <label for="todo1"> Task</label><br>
+            </ul>
+            <div id="buttons">
+                <button class="save">Save</button>
+                <button class="clear">Clear</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <input type="text" placeholder="Add New ToDo">
+        <span onclick="newElement()" class="addButton">+</span>
+    </footer>
+    <script src="scripts/todo.js"></script>
+</body>
+</html>
