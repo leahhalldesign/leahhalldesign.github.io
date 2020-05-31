@@ -1,81 +1,150 @@
-/*const input = document.querySelector("input[type = 'text']");
-const ul = document.querySelector("ul");
+const clear = document.querySelector(".clear");
+const dateElement = document.getElementById("date");
+const list = document.getElementById("list");
+const input = document.getElementById("input");
 
-inputaddEventListener("keypress", function(keyPressed) {
-    if(keyPressed.which === 13){
-        const li = document.createElement("li");
-        const spanElement = document.createElement("span")
-        const icon = document.createElement("i");
 
-        const newTodo = this.value;
-        this.value = " ";
+const CHECK = "fa-check-circle";
+const UNCHECK = "fa-circle";
+const LINE_THROUGH = "lineThrough";
 
-        icon.classList.add('fas', 'fa-trash-alt');
-        spanElement.append(icon);
-        ul.appendChild(li).append(spanElement,newTodo);
+let toDoList =[];
 
-        deleteTodo();
-
-    }
-});
-
-function deleteTodo() {
-    for(let span of spans) {
-        span.addEventListener ("click", function() {
-            span.parentElement.remove();
-            event.stopPropagation();
-        });
-    }
+let LIST, id;
+let data = localStorage.getItem("toDo");
+if(data) {
+    LIST = JSON.parse(data);
+    id = LIST.length;
+    loadList(LIST);
+} else {
+    LIST = [];
+    id = 0;
 }
 
-ul.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
+function loadList(array) {
+    array.forEach(function(item){
+        addToDo(item.name, item.id, item.done, item.trash);
+    });
+}
+
+clear.addEventListener("click", function() {
+    localStorage.clear();
+    location.reload();
+})
+
+const options = {weekday:"long", month:"short", day:"numeric"};
+const today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("en-US", options);
+
+function addToDo(toDo, id, done, trash) {
+
+    if(trash) {
+        return;
     }
-}, false
-);
 
-const saveButton = document.querySelector(".save");
-const clearButton = document.querySelector(".clear");
+    const DONE = done ? CHECK : UNCHECK;
+    const LINE = done ? LINE_THROUGH : "";
 
-saveButton.addEventListener('click', function() {
-    localStorage.setItem('todoList', ul.innerHTML);
+    const item = `<li class="item">  
+                    <i class="far fa-circle co" job="complete" id="0"></i>
+                    <p class="text">${toDo}</p>
+                    <i class="far fa-trash-alt" job="delete" id="0"></i>
+                  </li> `;
+    const position = "beforeend";
+    
+    list.insertAdjacentHTML(position, item);
+}
+
+document.addEventListener("keyup", function(event) {
+    if(event.keyCode == 13) {
+        const toDo = input.value;
+
+        if(toDo) {
+            addToDo(toDo, id, false, false);
+
+            LIST.push({
+                name : toDo,
+                id : id,
+                done : false,
+                trash : false
+            });
+            localStorage.setItem("toDo", JSON.stringify(LIST));
+
+            id++;
+        }
+        input.value = "";
+    }
 });
 
-clearButton.addEventListener('click', function() {
-    ul.innerHTML = " ";
-    localStorage.removeItem('todoList', ul.innerHTML);
+function completeToDo(element) {
+    element.classList.toggle(CHECK);
+    element.classList.toggle(UNCHECK);
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+
+    LIST[element.id].done = LIST[element.id].done ? false : true;
+}
+
+function removeToDo(element) {
+    element.parentNode.parentNode.removeChild(element.parentNode);
+
+    LIST[element.id].trash = true;
+}
+
+list.addEventListener("click", function(event) {
+    const element = event.target;
+    const elementJob = element.attributes.job.value;
+
+    if(elementJob == "complete") {
+        completeToDo(element);
+    } else if(elementJob == "delete") {
+        removeToDo(element);
+    }
+    localStorage.setItem("toDo", JSON.stringify(LIST));
 });
 
-function loadTodo() {
-    if(localStorage.getItem('todoList')) {
-        ul.innerHTML = localStorage.getItem('todoList');
-        deleteTodo();
-    }
-} */
+function selectActiveTasks() {
+    list.innerHTML = '';
+    filteredTasks = toDo.filter(item => item.done === false);
+    filteredTasks.forEach(addToDO);
+}
 
-function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-      alert("You must write something!");
-    } else {
-      document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-  
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-  
-    for (i = 0; i < close.length; i++) {
-      close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-      }
-    }
-  }
+function selectCompletedTasks() {
+    list.innerHTML = '';
+    filteredTasks = toDo.filter(item => item.done === true);
+    filteredTasks.forEach(addToDo);
+}
+
+function selectAll() {
+    init();
+}
+
+function countLefttasks() {
+    document.getElementById('tasksLeft').innerHTML = item.filter(item => item.done === false).length;
+}
+
+
+/*filterOption.addEventListener("click", filterToDo);
+
+function filterToDo(e) {
+    const todos = list.childNodes;
+    todos.forEach(function(toDo) {
+        switch(e.target.value) {
+            case "all":
+                break;
+            case "completed":
+                if(toDo.classList.contains('DONE')) {
+                    toDo.style.display = "flex";
+                } else {
+                    toDo.style.display = "none";
+                }
+                break;
+            case "active":
+                if(!toDo.classList.contains('DONE')) {
+                    toDo.style.display = "flex";
+                } else {
+                    toDo.style.display = "none";
+                }
+                break;
+        }
+    });
+ } */
