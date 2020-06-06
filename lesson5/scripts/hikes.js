@@ -48,7 +48,7 @@ const hikeList = [
       return this.getAllHikes().find(hike => hike.name === hikeName);
     }
     showHikeList() {
-      this.parentElement.innterHTML = '';
+      this.parentElement.innerHTML = '';
       renderHikeList(this.parentElement, this.getAllHikes());
       this.addHikeListener();
       this.backButton.classList.add('hidden');
