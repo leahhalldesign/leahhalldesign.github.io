@@ -4,6 +4,12 @@
 h1, h2, h3 {
     font-family: 'Press Start 2P', cursive;
 }
-h4, p {
+h4, p, a {
     font-family: 'PT Serif', serif;
+}
+html, img {
+    max-width: 100%;
+}
+footer {
+    margin-top: 50px;
 }
