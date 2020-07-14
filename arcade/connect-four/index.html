@@ -11,11 +11,11 @@
         <h1>Connect Four</h1>
     </header>
     <main>
-        <h3> 
-            The current Player is: Player <span id="current-player">1</span>
-        </h3>
-        <h3 id="result"></h3>
-    
+        <h2>Rules</h2>
+        <p>Tap a space along the bottom row to get started. The aim for both players is to make a straight line of four own pieces; the line can be vertical, horizontal or diagonal.</p>
+        <p>Before starting, players decide randomly which of them will be the beginner; moves are made alternatively, one by turn.</p>
+        <p>Moves entails in placing a circle on the board; circles start on the bottom row or pile up on the last piece introduced in the same column. So, in every turn the introduced piece may be placed at most on seven different squares.</p>
+        <p>The winner is the first player who gets a straight line made with four own pieces and no gaps between them.</p>
         <div class="grid">
             <div></div>
             <div></div>
@@ -59,14 +59,18 @@
             <div></div> 
             <div></div>
             <div></div>
-            <div class=taken></div>
-            <div class=taken></div>
-            <div class=taken></div>
-            <div class=taken></div>
-            <div class=taken></div>
-            <div class=taken></div> 
-            <div class=taken></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div> 
+            <div class="taken"></div>
         </div>
+        <h3> 
+            The Current Player is: Player <span id="current-player">1</span>
+        </h3>
+        <h3 id="result"></h3>
     </main>
     <footer>&copy; 2020 | Throwback Arcade | Leah Hall</footer> 
     <script src="scripts/main.js"></script>  
