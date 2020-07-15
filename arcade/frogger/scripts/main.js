@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTime = 20
     let timerId
   
-    //move the Frog
     function moveFrog(e) {
       squares[currentIndex].classList.remove('frog')
       switch(e.keyCode) {
@@ -35,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
       win()
     }
   
-    //move the cars
     function autoMoveCars() {
       carsLeft.forEach(carLeft => moveCarLeft(carLeft))
       carsRight.forEach(carRight => moveCarRight(carRight))
     }
   
-    //move the car left on a time loop
     function moveCarLeft(carLeft) {
       switch (true) {
         case carLeft.classList.contains('c1'):
@@ -59,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    //move the car right on a time loop
     function moveCarRight(carRight) {
       switch (true) {
         case carRight.classList.contains('c1'):
@@ -77,13 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    //move the logs
     function autoMoveLogs() {
       logsLeft.forEach(logLeft => moveLogLeft(logLeft))
       logsRight.forEach(logRight => moveLogRight(logRight))
     }
   
-    //logs going left
     function moveLogLeft(logLeft) {
       switch (true) {
         case logLeft.classList.contains('l1'):
@@ -109,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    //logs going right
     function moveLogRight(logRight) {
       switch (true) {
         case logRight.classList.contains('l1'):
@@ -134,8 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break
       }
     }
-  
-    //move the frog when its on the log moving left
+
     function moveWithLogLeft() {
       if (currentIndex >= 27 && currentIndex < 35) {
         squares[currentIndex].classList.remove('frog')
@@ -143,8 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[currentIndex].classList.add('frog')
       }
     }
-  
-    //move the frog when its on the log moving right
+
     function moveWithLogRight() {
       if (currentIndex > 18 && currentIndex <= 26) {
         squares[currentIndex].classList.remove('frog')
@@ -153,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    //rules for frog to win
     function win() {
       if (squares[4].classList.contains('frog')) {
         result.innerHTML = 'You WON'
@@ -163,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    //rules for frog to lose
     function lose() {
       if ((currentTime === 0 ) || (squares[currentIndex].classList.contains('c1')) 
       || (squares[currentIndex].classList.contains('l5'))
@@ -176,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
       
-    //all the functions that move pieces
     function movePieces() {
       currentTime--
       timeLeft.textContent = currentTime
@@ -187,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
       lose()
     }
   
-    //to start, and pause the game
     startBtn.addEventListener('click', () => {
       if(timerId) {
         clearInterval(timerId)

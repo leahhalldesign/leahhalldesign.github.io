@@ -13,7 +13,6 @@ function randomSquare() {
   let randomPosition = square[Math.floor(Math.random() * 9)]
   randomPosition.classList.add('mole')
 
-  //assign the id of the randomPosition to hitPosition for us to use later
   hitPosition = randomPosition.id
 }
 
