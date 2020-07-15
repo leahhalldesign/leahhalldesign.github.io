@@ -74,9 +74,10 @@ h2 {
   footer {
     background-color: #835B7F;
     color: #F0FF79;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 98%;
     height: 2.5rem; 
   }
