@@ -4,6 +4,9 @@
 h1, body {
   margin: 0;
 }
+body {
+  background-color: black;
+}
 h1, h2, h3 {
   font-family: 'Press Start 2P', cursive;
 }
@@ -15,13 +18,15 @@ h4, p, a, footer {
 }
 p {
   font-size: 11px;
-  color: #835B7F;
+  color: white;
+  font-weight: 300;
 }
 h2 {
   font-size: 20px;
+  color:  #EFB1FF;
 }
 .grid {
-    border: 1px solid;
+    border: white 1px solid;
     display: flex;
     flex-wrap: wrap;
     height: 120px;
@@ -53,6 +58,7 @@ h2 {
   h3 {
     text-align: center;
     margin-top: 40px;
+    color: white;
   }
   h2, p {
     margin: 10px;
