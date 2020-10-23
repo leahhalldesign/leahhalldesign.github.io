@@ -3,48 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1</title>
+    <title>Leah Ogden Design</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul id="nav">
-                <li><a href="#" id="menu">&equiv; Menu</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="lesson1/">Lesson 1</a></li>
-                <li><a href="lesson2/">Lesson 2</a></li>
-                <li><a href="lesson3/">Lesson 3</a></li>
-                <li><a href="lesson4/">Lesson 4</a></li>
-                <li><a href="lesson5/">Lesson 5</a></li>
-                <li><a href="lesson6/">Lesson 6</a></li>
-            </ul>
-        </nav>
-        <h1>Lesson 1</h1>
-    </header>
-    <main>
-        <h2>Notes</h2>
-        <p>localStorage is a way to store information on a page that a user has input, even when they refresh the page. localStorage can also store the information until they come back later.</p>
-        <p>'var' is a variable that you want to lable a group of objects as. It's can be compared to a box filled with similar/the same item that is labeled so that you can easily find that item later.</p>
-        <p>When you declare a variable and tell it to get a certain element (getElementById/querySelector), you are asking it to grab that specific element, take what's inside of it, and store that information into the variable.</p>
-        <h2>Code Examples</h2>
-        <code>
-            if (localStorage.clickcount) {
-                localStorage.clickcount = Number(localStorage.clickcount) + 1;
-            } else {
-                localStorage.clickcount = 1;
-            }
-            document.getElementById("result").innerHTML = "You have clicked the button " +
-            localStorage.clickcount + " time(s).";
-        </code>
-        <h3>
-           <span id="result"></span>
-        </h3>
-    </main>
-    <footer>
-        &copy; 2020 | Portfolio | Leah Hall
-    </footer>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/lesson1.js"></script>
+</head>
+<body> 
+  <header> <a href="">
+    <h4 class="logo">Leah Ogden</h4>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#home">Work</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li> <a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+	<main>
+		<section class="banner">
+    <h2 class="parallax">PARALLAX HERO</h2>
+    <p class="parallax_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+	<div class="button">subscribe</div>
+  </section>
+	</main>
+  <footer>
+  <div class="copyright">&copy;2020- <strong>Leah Ogden Design</strong></div>
+</footer>
 </body>
 </html>
