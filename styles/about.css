@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Lobster&display=swap');
+
+body {
+    margin: 0;
+	background: linear-gradient(to bottom, #F4DECB 15%, #fff 0%);
+}
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+}
+header {
+    padding: 20px 250px;
+    color: #181818;
+    /*background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);*/
+}
+header h4 {
+    display: inline;
+}
+header h4 a {
+    text-decoration: none;
+    color:#181818;
+}
+header nav {
+    margin-top: 10px;
+    float: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+    font-weight: 600;
+}
+.current:link {
+    color: #94618E;
+    font-weight: 700;
+    text-decoration: underline wavy;
+} 
+.current:visited {
+    color: #94618E;
+    font-weight: 700;
+}
+.current:hover {
+    text-decoration: underline wavy;
+}
+.current:active {
+    color: #181818;
+}
+header nav ul {
+    display: inline;
+    margin: 0;
+}       
+header nav ul li {
+    display: inline-block;
+    padding-left: 25px;
+}
+header nav ul li a:link {
+    text-decoration: none;
+    color: #181818;
+}
+header nav ul li a:visited {
+    color: #181818;
+}
+header nav ul li a:hover {
+    text-decoration: underline wavy;
+}
+header nav ul li a:active {
+    color: #181818;
+}
+
+
+main {
+	padding: 10px 250px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+main h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: 'Lobster', cursive;
+    font-size: 5em;
+}
+main h2 {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+	font-size: 2em;
+	margin-top: 0;
+}
+main h3 {
+    margin-bottom: -10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+main h4 {
+	font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+	margin-bottom: 5px;
+    font-weight: 400;
+    color: #959797;
+}
+main p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+.intro {
+    margin-top: 15%;
+}
+.body {
+	
+	margin-top: 20%;
+}
+.body div {
+	margin-bottom: 125px;
+}
+
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+    background-color: #49274A;
+    padding: 50px 250px;
+    padding-bottom: 70px;
+    color: #F4DECB;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+}
+footer h2 {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+footer .logo {
+    grid-column: 1/2;
+    font-size: 2.5em;
+    margin: 0;
+}
+footer .menu {
+    grid-column: 2/3;
+}
+footer .menu ul{
+    list-style-type: none;
+    padding: 0;
+}
+footer .menu ul li {
+    padding-bottom: 5px;
+}
+footer .menu a {
+    text-decoration: none;
+    color:#F8EEE7;
+}
+footer .menu a:hover {
+    color: #FEDB47;
+}
+footer .copyright {
+    grid-column: 1/2;
+    font-size: .9em;
+    color: #F8EEE7;
+}
+
+/* Mobile */
+@media (max-width: 430px) {
+    body {
+        background: linear-gradient(to bottom, #F4DECB 14%, #fff 0%);
+    }
+    .lrg-menu {
+        display: none;
+    }
+    header {
+        padding: 20px 0px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    header nav ul{
+        font-size: 1.25em;
+        display: block;
+    }
+    header nav ul li {
+        display: block;
+    }
+    main {
+        padding: 10px 0px;
+        width: 80%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    footer {
+        display: block;
+    }
+    footer .logo {
+        margin-bottom: 20px;
+    }
+    footer .logo, footer div {
+        width: 400px;
+        margin-left: auto;
+        margin-left: auto;
+    }
+}
+
+/* Small Tablets */
+@media (min-width: 341px) and (max-width: 700px) {
+    .lrg-menu {
+        display: none;
+    }
+    header {
+        padding: 20px 0px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main {
+        padding: 10px 0px;
+        width: 80%;
+    }
+    footer {
+        display: block;
+        padding: 50px 25px;
+    }
+    footer .logo {
+        margin-bottom: 20px;
+    }
+    footer .logo, footer div {
+        width: 400px;
+        margin-left: auto;
+        margin-left: auto;
+    }
+}
+
+/* Small Desktops */
+@media (min-width: 701px) and (max-width: 1120px) {
+    .lrg-menu {
+        display: none;
+    }
+    header {
+        width: 600px;
+        padding: 20px 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main {
+        padding: 10px 100px;
+    }
+    footer {
+        display: block;
+    }
+    footer .logo {
+        margin-bottom: 20px;
+    }
+}
