@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 04</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li><a href="#" id="menu">&equiv; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson1/">Lesson 1</a></li>
+                <li><a href="lesson2/">Lesson 2</a></li>
+                <li><a href="lesson3/">Lesson 3</a></li>
+                <li><a href="lesson4/">Lesson 4</a></li>
+                <li><a href="lesson5/">Lesson 5</a></li>
+                <li><a href="challenge-one/todo.html">Challenge 1</a></li>
+                <li><a href="lesson7/">Lesson 7</a></li>
+                <li><a href="lesson8/">Lesson 8</a></li>
+                <li><a href="lesson9/">Lesson 9</a></li>
+                <li><a href="lesson10/">Lesson 10</a></li>
+                <li><a href="lesson11/auth/client/week11.html">Lesson 11</a></li>
+           </ul>
+        </nav>
+        <h1>Lesson 04</h1>
+    </header>
+    <main>
+        <h2>Notes</h2>     
+        <h3>Form Events</h3>
+        <p>focus: occurs when an element is focused on. In the case of an <input> element, this is when the cursor is placed inside the element.</p>
+        <p>blur: occurs when the user moves the focus away from the form element. </p>
+        <p>change: occurs when the user moves the focus away from the form elementafter changing it. So if a user clicks in an input field and makes no changes, and then clicks elsewhere, the change event won’t fire, but the blur event will.</p>
+        <p>Text input element objects have a value property that can be used to retrieve the text inside the field.</p>
+        <p>Hidden fields can be created using input fields with type='hidden' . These are not displayed by the browser, but have a 'value' attribute that can contain information that is submitted with the form.</p>
+        <p>A file input field can be created using input fields with type='file'.</p>
+        <h3>Object-Oriented Programming</h3>
+        <p>Used to model representations of objects in the real world.</p>
+        <p>Encapsulation: the inner workings are kept hidden inside the object and only the essential functionalities are exposed to the end user, such as the 'on' button.</p>
+        <p>Polymorphism:  the same process can be used for different objects.</p>
+        <p>Inheritance: taking the features of one object then adding some new features.</p>
+        <p>hasOwnProperty(): can be used to check if a method is its own property, or is inherited from the prototype.</p>
+        <p>propertyIsEnumerable(): can be used to check if a property is enumerable.</p>
+        <p>We can add a first() and last() methods that return the first and last items in the array.</p>
+        <p>An object property descriptor can have get() and set() methods instead of a value attribute. All objects must have one or the other, they can't have both. The get() and set() methods can be used to control how a property is set using assignment and the value that is returned when a property is queried.</p>
+        <p>const lois = Object.create(Human);</p>
+        <p>The Object() constructor function has a method called create that can be used to create a new object that is an exact copy of the object that is provided as an argument. The object that is provided as the argument acts as the prototype for the new object.</p>
+        <p>A mixin is a way of adding properties and methods of some objects to another object without using inheritance. It allows more complex objects to be created by ‘mixing’ basic objects together. Basic mixin functionality is provided by the Object.assign() method.</p>
+        <p>The findFriends() method fails to produce the expected output because this.name is actually referencing the name property of the global window object, which has the value of undefined .</p>
+        <p>Solutions: A common solution is to set the variable that to equal this beforethe nested function, and refer to that in the nested function instead of this . Here is the example again, using that</p>
+        <h3>Modern Javascript</h3>
+        <p>A big advantage of utilizing a popular library is that it will be used by lots of people and thoroughly tested. It will most likely have been optimized and battle-tested for nearly every eventuality.</p>
+        <p>There are some disadvantages to using libraries, however. You need to include the code for the library as well as your own code.</p>
+        <p>Default exportsrefer toa singlevariable, function or class in a module that can be imported without having to be explicitly named. </p>
+        <p>A Common JS module is created in a separate file, and the module.exports method is used to make any functions available to other files</p>
+        <p>The W3C are working on developing a standard calledWeb Componentsthat attempts to extend HTML and introduce new features such as templates, custom tags, the ability to import HTML partials, and a shadow DOM. The idea is to use it to develop modular and self-contained components that can be reused in different applications.</p>
+        <p> A package is just a directory with one or more files of code, as well as a package.json file that contains information about the code in the package. Developers can also share any modules they create by uploading them to the central repository for others to use.</p>
+        <p>Minification is the process of removing any unnecessary characters from your code to reduce the file size. This includes all comments, whitespace, and other characters that are superfluous.</p>
+        <p>Webpack is a module bundler that takes all the JavaScript files used in your project and bundles them altogether in one file.</p>
+
+
+        <h2>Code Examples</h2>
+        <code>const form = document.forms['search']; form.addEventListener ('submit', search, false); function search() { alert(' Form Submitted'); }</code>
+        <code>static description() { return 'A way of choosing random numbers' }</code>
+        <code>class NinjaTurtle extends Turtle { constructor(name) { super(name); this.weapon = 'hands'; } attack() { return `Feel the power of my ${this.weapon}!` } }</code>
+        <code>const turtles = ['Leonardo', 'Donatello', Michaelangelo', 'Raphael']; turtles.first(); << 'Leonardo' turtles.last(); << 'Raphael'</code>
+        <code>const PI = 3.145926; export default PI;</code>
+
+
+        
+        <h2>Team Activity</h2>
+        <a href="team.html">Lesson 04 Team Activity</a>
+    </main>
+    <footer>
+        &copy; 2020 | Portfolio | Leah Hall
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

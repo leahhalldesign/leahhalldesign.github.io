@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+main h1 {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 40px;
+}
+main h2 {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    padding: 15px;
+    width: 100%;
+}
+main div {
+    width: 40%;
+    flex: 1 0 auto;
+    margin-left: 15px;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.light {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.hidden {
+    display: none;
+}
+button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: white;
+    border: 3px solid darkorange;
+}

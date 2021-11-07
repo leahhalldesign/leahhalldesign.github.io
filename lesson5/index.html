@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 05</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li><a href="#" id="menu">&equiv; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson1/">Lesson 1</a></li>
+                <li><a href="lesson2/">Lesson 2</a></li>
+                <li><a href="lesson3/">Lesson 3</a></li>
+                <li><a href="lesson4/">Lesson 4</a></li>
+                <li><a href="lesson5/">Lesson 5</a></li>
+                <li><a href="challenge-one/todo.html">Challenge 1</a></li>
+                <li><a href="lesson7/">Lesson 7</a></li>
+                <li><a href="lesson8/">Lesson 8</a></li>
+                <li><a href="lesson9/">Lesson 9</a></li>
+                <li><a href="lesson10/">Lesson 10</a></li>
+                <li><a href="lesson11/auth/client/week11.html">Lesson 11</a></li>
+           </ul>
+        </nav>
+        <h1>Lesson 05</h1>
+    </header>
+    <main>
+        <h2>Notes</h2>     
+        <h3>Testing and Debugging</h3>
+        <p>An exception is an error that produces a return value that can then be used by the program to deal with the error. </p>
+        <p>An exception will also produce astack trace. This is a sequence of functions or method calls that lead to the point where the error occurred. It’s often not just a single function or method call that causes an error.</p>
+        <p>ECMAScript 5 introduced a strict mode that produces more exceptions and warnings and prohibits the use of some deprecated features. This is due to the fact that strict mode considers coding practices that were previously accepted as just being 'poor style' as actual errors.</p>
+        <p>Strict mode simply requires the following string to be added to the first line of a JavaScript file: 'use strict';</p>
+        <p>Linting tools such asJS Lint,JS Hint,andES Lintcan be used to test the quality of JavaScript code, beyond simply using strict mode. They are designed to highlight any sloppy programming practices or syntax errors, and will complain if certain style conventions are not followed, such as how code is indented. </p>
+        <p>The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code. Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in the code that let us check the value of variables at that point to see if they’re what we expect them to be. </p>
+        <p>Most modern browsers also have a debugging tool that allows you to setbreakpointsin your code that will pause it at certain points. You can then see the values of all the variables at those points and modify them. </p>
+        <p>So far we’ve seen errors that are thrown automatically by the JavaScript engine when an error occurs. It’s also possible to throw your own exceptions using the throw statement. This will allow for any problems in your code to be highlighted and dealt with, rather than lurk quietly in the background.</p>
+        <p>If we suspect a piece of code will result in an exception, we can wrap it in a try block.</p>
+        <p>The code inside the catch block will only run if an exception is thrown inside the try block. The error object is automatically passed as a parameter to the catch block. This allows us to query the error name, message and stack properties, and deal with it appropriately. In this case, we actually return a string representation of an imaginary number.</p>
+        <p>A finally block can be added after a catch block. This will always be executed after the try or catch block, regardless of whether an exception occurred or not. It is useful if you want some code to run in both cases.</p>
+        <p>Testing is an important part of programming that can often be overlooked. Writing good tests means your code will be less brittle as it develops, and any errors will be identified early on.</p>
+        <p>Test-driven development(TDD) is the process of writing tests before any actual code. Obviously these tests will initially fail, because there is no code to test. The next step is to write some code to make the tests pass. After this, the code is refactored to make it faster, more readable, and remove any repetition. The code is continually tested at each stage to make sure it continues to work.</p>
+        
+
+        <h2>Code Examples</h2>
+        <code>throw 2; throw 'Up'; throw { toys: 'out of pram' };</code>
+        <code>throw new Error('Something has gone badly wrong!');</code>
+        <code>function imaginarySquareRoot(number) { 'use strict'; try { return String(squareRoot(number)); } catch(error) { return squareRoot(-number)+'i'; } }</code>
+        <code>function imaginarySquareRoot(number) { 'use strict'; let answer; try { answer = String(squareRoot(number)); } catch(error) { answer = squareRoot(-number)+"i"; } finally { return `+ or - ${answer}`;}}</code>
+
+
+
+        <h2>Team Activity</h2>
+        <a href="team.html">Lesson 05 Team Activity</a>
+    </main>
+    <footer>
+        &copy; 2020 | Portfolio | Leah Hall
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

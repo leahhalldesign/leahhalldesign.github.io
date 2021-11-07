@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 08</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li><a href="#" id="menu">&equiv; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson1/">Lesson 1</a></li>
+                <li><a href="lesson2/">Lesson 2</a></li>
+                <li><a href="lesson3/">Lesson 3</a></li>
+                <li><a href="lesson4/">Lesson 4</a></li>
+                <li><a href="lesson5/">Lesson 5</a></li>
+                <li><a href="challenge-one/todo.html">Challenge 1</a></li>
+                <li><a href="lesson7/">Lesson 7</a></li>
+                <li><a href="lesson8/">Lesson 8</a></li>
+                <li><a href="lesson9/">Lesson 9</a></li>
+                <li><a href="lesson10/">Lesson 10</a></li>
+                <li><a href="lesson11/auth/client/week11.html">Lesson 11</a></li>
+           </ul>
+        </nav>
+        <h1>Lesson 08</h1>
+    </header>
+    <main>
+        <h2>Notes</h2>     
+        <h3>Transforms and Transitions</h3>
+        <p>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page.</p>
+        <p>Translation functions allow you to move elements left, right, up, or down.</p>
+        <p>The translate(x,y) function moves an element x from the left, and y from the top.</p>
+        <p>If you only want to move an element vertically or horizontally, you can use the translatex or translatey functions respectively. </p>
+        <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one value is provided, it will be used for both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio. </p>
+        <p>As with translate , you can also use the scaleX(x) or scaleY(y) functions. These functions will scale only the horizontal dimensions or only the vertical dimensions respectively.</p>
+        <p>The rotate() function rotates an element around the point of origin by a specified angle value. As with scale , by default the point of origin is the element’s center. Generally, angles are declared in degrees, with positive degrees moving clockwise and negative moving counterclockwise. In addition to degrees, values can be provided in grads, radians, or turns.</p>
+        <p>The skew(x,y) function specifies a skew along the x and y axes. As you’d expect, the x specifies the skew on the x axis, and the y specifies the skew on the y axis. If the second parameter is omitted, the skew will only occur on the x axis</p>
+        <p>Because the default transform-origin is the center of the circle, applying a rotate() transform to a circle would have no visible effect—a circle rotated 90 degrees still looks exactly the same as it did before being rotated. An ellipse rotated 180 degrees around its center would also look the same as it did before being rotated upside down. However, if you gave your circle or ellipse a transform-origin of 10% 10% or top center , you would notice the rotation </p>
+        <p>The transition-property property defines the CSS properties of the element that should be transitioned, with all for all properties being the default.</p>
+        <p>The transition-duration property sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state. </p>
+        <p>The transition-timing-function lets you control the pace of the transition in even more granular detail. Do you want your animation to start off slow and become faster, start off fast and end slower, advance at an even keel, or some other variation?</p>
+        <p>If you want your properties to transition at different rates, or if you just want a select few to have a transition effect, include them as a comma-separated list containing, at minimum, the transition-property and transition-duration for each. Simply include each value in a comma-separated list using the same order as the transition-property for all your longhand transition property declarations.</p>
+        <p>CSS animations, unlike transitions, allow you to control each step of an animation via keyframes.</p>
+        <p>To animate an element in CSS, you first create a named animation, then attach it to an element in that element’s property declaration block. Animations in themselves don’t do anything; in order to animate an element, you’ll need to associate the animation with that element.</p>
+        <p>To create an animation, use the @keyframes rule for IE10+ and FF16+. Include @-webkit-keyframes for all WebKit implementations followed by a name of your choosing, which will serve as the identifier for the animation. Then, you can specify your keyframes.</p>
+        <p>Animation-name, animation-duration, animation-timing-funtion,animation-iteration-count, animation-direction, animation-delay, animation-fill-mode, animation-play-state</p>
+        <p>The animation-iteration-count property lets you define how many times the animation will play through. </p>
+        <p>The animation-fill-mode property defines what happens before the first animation iteration begins and after the last animation iteration concludes.</p>
+        <h3>Canvas, SVG, and Drag and Drop</h3>
+        <p>With HTML5’s Canvas API, we can draw anything we can imagine, all through JavaScript. This can improve the performance of our websites by avoiding the need to download images off the network. With canvas, we can draw shapes and lines, arcs and text, gradients and patterns. In addition, canvas gives us the power to manipulate pixels in images and even video.</p>
+        <p>The first step to using canvas is to add a canvas element to the page</p>
+        <p>Since drawing on the canvas is done using JavaScript, we’ll need a way to grab the element from the DOM. We’ll do so by giving our canvas an ID</p>
+        <p>The canvas element takes both a width and height attribute, which must also be set.</p>
+        <p>On a real-life painting canvas, you must first saturate your brush with paint before you can begin. In the HTML5 canvas, you must do the same, and we do so with the strokeStyle or fillStyle properties. Both strokeStyle and fillStyle are set on a context object, and both take one of three values: a string representing a color, a CanvasGradient object, or a CanvasPattern object.</p>
+        <p>Once we’ve defined the color of the stroke and the fill, we’re ready to start drawing! Let’s begin by drawing a rectangle. We can repeat the steps we just took: grabbing the canvas and the context, and setting a fill and stroke style. But now, we’ll draw a rectangle. We can do this by calling the fillRect and strokeRect methods. Both of these methods take the X and Y coordinates where you want to begin drawing the fill or the stroke, and the width and height of the rectangle. </p>
+        <p>As you may have gathered, the coordinate system in the canvas element is different from the Cartesian coordinate system you learned in math class. In the canvas coordinate system, the top-left corner is (0,0). If the canvas is 200 pixels by 200 pixels, then the bottom-right corner is (200,200),</p>
+        <p>The first step is to begin the path of the circle. We do that with the method beginPath() , which resets the default path for you to begin drawing a new shape</p>
+        <p>The signature for the arc method is: arc(x, y, radius, startAngle, endAngle, anticlockwise) .</p>
+        <p>If we create an image programmatically using the Canvas API, but decide we’d like to have a local copy of our drawing, we can use the API’s toDataURL method to save our drawing. toDataURL creates a URL with the image in it, (either a png or jpg, whichever is specified). You can then right-click the image at this URL, and save it as a PNG or JPEG.</p>
+        <p>First, a quick refresher: SVG stands forScalable Vector Graphics, a specific file format that allows you to describe vector graphics using XML. </p>
+        <p>The viewBox attribute defines the starting location, width, and height of the SVG image.
+
+            The circle element defines a circle, with cx and cy the X and Y coordinates of the center of the circle. The radius is represented by r , while fill defines the fill style.</p>
+        <p>To save ourselves some work (and sanity), instead of creating SVG images by hand, we can use an image editor to help. One open source tool that you can use to make SVG images is Inkscape, which is available for download athttp://inkscape.org/.</p>
+        <p>To make our images draggable. In order to do that, we add the draggable attribute to them, and set the value to true</p>
+        <p>Note that draggable isnota Boolean attribute, so you have to explicitly set it to true .</p>
+
+
+
+        <h2>Code Examples</h2>
+        <h3>Transforms and Transitions</h3>
+        <code>transform: translate(45px, -45px);</code>
+        <code>transform: scale(1.5, 0.25);</code>
+        <code>transform: scale(2);</code>
+        <code>transform: rotate(10deg) translateX(40px) scale(1.5);</code>
+        <code>transform: skew(15deg, 4deg);</code>
+        <code>transition: transform 0.2s ease-out 50ms;</code>
+        <code>@-webkit-keyframes myAnimation { 
+            /* put animation keyframes here */
+        }
+        @keyframes myAnimation { 
+            /* put animation keyframes here */
+        }</code>
+        <h3>Canvas, SVG, and Drag and Drop</h3>
+        <code><canvas>
+            Sorry! Your browser doesn’t support Canvas.
+        </canvas></code>
+        <code><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400">
+            <desc>Drawing a rectangle</desc>
+                <rect x="10" y="10" width="100" height="100"  
+                    fill="blue" stroke="red" stroke-width="3"  />  
+            
+        </svg></code>
+
+
+
+        <h2>Team Activity</h2>
+        <a href="team.html">Lesson 08 Team Activity</a>
+    </main>
+    <footer>
+        &copy; 2020 | Portfolio | Leah Hall
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

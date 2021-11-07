@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 03</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li><a href="#" id="menu">&equiv; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson1/">Lesson 1</a></li>
+                <li><a href="lesson2/">Lesson 2</a></li>
+                <li><a href="lesson3/">Lesson 3</a></li>
+                <li><a href="lesson4/">Lesson 4</a></li>
+                <li><a href="lesson5/">Lesson 5</a></li>
+                <li><a href="challenge-one/todo.html">Challenge 1</a></li>
+                <li><a href="lesson7/">Lesson 7</a></li>
+                <li><a href="lesson8/">Lesson 8</a></li>
+                <li><a href="lesson9/">Lesson 9</a></li>
+                <li><a href="lesson10/">Lesson 10</a></li>
+                <li><a href="lesson11/auth/client/week11.html">Lesson 11</a></li>
+           </ul>
+        </nav>
+        <h1>Lesson 03</h1>
+    </header>
+    <main>
+        <h2>Notes</h2>
+        <h3>Object Methods, .this</h3>
+        <p>"this" is the "current object"</p>
+        <p>If you use the object name instead, you could have accidentally assigned it to something else and then there will be an error. .this is more accurate.</p>
+        <p>Arrow functions have no .this</p>
+        <h3>Object Literals</h3>
+        <p>An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}</p>
+        <p>You can access the properties of an object using dot notation.  superman.name</p>
+        <p>To call an object’s method we can also use dot or bracket notation. Calling a method is the same as invoking a function, so parentheses need to be placed after the method name.</p>
+        <p>If you want to add a property: superman.city = 'Metropolis';</p>
+        <p>Any property can be removed from an object using the delete operator: delete superman.fly</p>
+        <p>Nested Objects: It’s even possible for an object to contain other objects: const jla = { superman: { realName: 'Clark Kent' }}</p>
+        <p>An object literal can be passed as a parameter to a function. This is useful when there are a large number of parameters, as it allows the arguments to be provided by name and in any order. This means you don't have to remember the order to enter them when invoking a function. See example below.</p>
+        <h3>JSON</h3>
+        <p>parse(): takes a string of data in JSON format and returns a JavaScript object.</p>
+        <p>stringify(): does the opposite, taking a JavaScript object and returning a string of JSON data.</p>
+        <h3>The Document Object Model</h3>
+        <p>The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.</p>
+        <p>The DOM provides several methods that allow us to access any element on a page. These methods will return a node object or a node list, which is an array-like object. These objects can then be assigned to a variable and be inspected or modified.</p>
+        <p>ex/ const body = document.body;</p>
+        <p>The className property allows the class of an element to be set directly: wonderWoman.className;</p>
+        <p>The classList property is a list of all the classes an element has. It has a number of methods that make it easier to modify the class of an element.</p>
+        <p>The add method can be used to add a class to an element without overwriting any classes that already exist: wonderWoman.classList.add('warrior');</p>
+        <p>The remove method will remove a specific class from an element.</p>
+        <p>The toggle method is a particularly useful method that willadda class if an element doesn’t have it already, andremovethe class if it does have it. It returns true if the class was added and false if it was removed.</p>
+        <p>The contains method will check to see if an element has a particular class: wonderWoman.classList.contains('hero'); << true</p>
+        <h4>Creating an Element in 3 steps</h4>
+        <p>createElement(): takes a tag name as a parameter and returns that element. const flash = document.createElement('li');</p>
+        <p>At the moment, this element is empty. To add some content, we’ll need to create a text node.</p>
+        <p>document.createTextNode(): takes a parameter, which is a string containing the text that goes in the node. </p>
+        <p>Now we have an element node and a text node, but they are not linked together ― we need to append the text node to the paragraph node.</p>
+        <p>appendChild(): will add another node (given as an argument) as a child node. We want our newly created text node to be a child node of the list element node.</p>
+        <p>This can be made simpler by using the textContent property that every element object has. This will add a text node to an element without the need to append it</p>
+        <p>insertBefore(): will place a new element before another element in the markup. It’s important to note that this method is called on the parent node.</p>
+        <p>removeChild(): method is called on the parent node and has a single parameter, which is the node to be removed. </p>
+        <p>replaceChild(): used to replace one node with another. It’s called on the parent node and has two parameters: the new node and the node that is to be replaced. </p>
+        <p>innerHTML: returns all the child elements of an element as a string of HTML.</p>
+        <h3>Events</h3>
+        <p>The recommended way of dealing with events, and the current standard, is to use event listeners. The addEventListener() method is called on a node object, the node to which the event listener is being applied: document.body.addEventListener('click',doSomething);</p> 
+        <p>The type property is used to tell us that the type of event logged was a click event.</p>
+        <p>The target property returns a reference to the node that fired the event. </p>
+        <p>The screenX and screenY properties show the number of pixels from the left and top of the screen respectively where the event took place.</p>
+        <p>The clientX and clientY properties show the number of pixels from the left and top of the client that is being used (usually the browser window).</p>
+        <p>The pageX and pageY properties show the number of pixels from the left and top, respectively, where the event took place in thedocument. This property takes account of whether the page has been scrolled.</p>
+        <p>information about event listeners on <a href="events.html">Events</a></p>
+        <p>Pressing the modifier keys such asShift,Ctrl,Altandmeta(Cmdon Mac) will fire the keydown and keyup events, but not the keypress event as they don't produce any characters on the screen.</p>
+        <p>Touch events are usually made with a finger, but can also be by stylus or another part of the body. It’s important to support mouse events as well as touch events, so non-touch devices are also supported. </p>    
+        <p>The touchstart event occurs when a user initially touches the surface.</p>
+        <p>The touchend event occurs when a user stops touching the surface</p>
+        <p>The touchmove event occurs after a user has touched the screen then moves around without leaving. It will continue to occur as long as the user is still touching the screen, even if they leave the element to which the event listener is attached.</p>
+        <p>The touchenter event occurs when a user has already started touching the surface, but then passes over the element to which the event listener is attached.</p>
+        <p>The touchleave event occurs when the user is still touching the surface, but leaves the element to which the event listener is attached.</p>
+        <p>The touchcancel event occurs when a touch event is interrupted, such as a user’s finger moving outside the document window, or too many fingers being used at once. A pop-up dialog will also cancel a touch event.</p>
+        <p>Because it’s possible to touch a surface many times at once, touch event objects have a property called touches. The first touch object can be accessed using events.touches[0] and the second using events.touches[1].</p>
+        <p>Each touch object has a number of properties, many similar to the event object, such as touch.screenX and touch.screenY to find the coordinates of the touch point. They have other properties such as touch.radiusX and touch.radiusY , which give an indication of the area covered by the touch, and touch.force , which returns the amount of pressure being applied by the touch as a value between 0 and 1 .</p>
+        <p>An event listener can be removed using the removeEventListener() method.</p>
+        <p>preventDefault(): a method of the event object that can be used inside the callback function to stop the default behavior happening.</p>
+
+
+       
+        <h2>Code Examples</h2>
+        <code>sayHi() { alert(this.name); }</code>
+        <code>// long way // const ironMan = { name: name, realName: realName } // short ES6 way // const ironMan = { name, realName };</code>
+        <code>function greet({greeting,name,age}) { return `${greeting}! My name is ${name} and I am ${age} years old.`; }</code>
+        <code>const flash = document.createElement('li'); flash.textContent = 'Flash';</code>
+        <code>function createElement (tag,text) { const el = document.createElement(tag); el.textContent = text; return el }</code>
+        <code>const h1 = document.getElementById('title'); const oldText = h1.firstChild; const newText = document.createTextNode('Justice League of America'); h1.replaceChild(newText,oldText);</code>
+        <code>superman.style.display = 'none';</code>
+        <code>document.body.addEventListener("click", doSomething);</code>
+        <code>function doSomething(event){ console.log(`screen: (${event.screenX},${event.screenY}), page: (${event.pageX},${event.pageY}), client: (${event.screenX},${event.screenY})`) }</code>
+        <code>addEventListener('touchend', () => console.log('Touch stopped');</code>
+
+
+        <h2>Team Activity</h2>
+        <a href="team.html">Lesson 03 Team Activity</a>
+    </main>
+    <footer>
+        &copy; 2020 | Portfolio | Leah Hall
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
