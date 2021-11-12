@@ -8,17 +8,21 @@ body {
     font-size: 2em;
 }
 header {
-    background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);
+    /*background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);
+    background-image: url("../images/header-main.png");*/
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #181818;
+}
+header div {
     padding: 20px 250px;
-    height: 90%;
-    color: #F8EEE7;
 }
 header h4 {
     display: inline;
 }
 header h4 a {
     text-decoration: none;
-    color:#F8EEE7;
+    color:#181818;
 }
 header nav {
     margin-top: 10px;
@@ -40,7 +44,7 @@ header nav {
     text-decoration: underline wavy;
 }
 .current:active {
-    color: #F8EEE7;
+    color: #181818;
 }
 header nav ul {
     display: inline;
@@ -52,16 +56,16 @@ header nav ul li {
 }
 header nav ul li a:link {
     text-decoration: none;
-    color: #F8EEE7;
+    color: #181818;
 }
 header nav ul li a:visited {
-    color: #F8EEE7;
+    color: #181818;
 }
 header nav ul li a:hover {
     text-decoration: underline wavy;
 }
 header nav ul li a:active {
-    color: #F8EEE7;
+    color: #181818;
 }
 header h3 {
     margin-bottom: -10px;
