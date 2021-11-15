@@ -8,14 +8,20 @@ body {
     font-size: 2em;
 }
 header {
-    /*background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);
-    background-image: url("../images/header-main.png");*/
+    /*background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);*/
+    background-image: url("../images/profile.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 578px 600px;
+    background-position: right;
+    height: 600px;
+    margin-right: 100px;
+    
     color: #181818;
+    height: 600px;
 }
 header div {
-    padding: 20px 250px;
+    padding: 20px 150px;
+    padding-left: 250px;
 }
 header h4 {
     display: inline;
@@ -32,12 +38,12 @@ header nav {
     font-weight: 600;
 }
 .current:link {
-    color: #FEDB47;
+    color: #EE5135;
     font-weight: 700;
     text-decoration: underline wavy;
 } 
 .current:visited {
-    color: #FEDB47;
+    color: #EE5135;
     font-weight: 700;
 }
 .current:hover {
@@ -197,7 +203,7 @@ footer {
     background-color: #49274A;
     padding: 50px 250px;
     padding-bottom: 70px;
-    color: #F4DECB;
+    color: #F8EEE7;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;
@@ -225,6 +231,9 @@ footer .menu ul li {
 footer .menu a {
     text-decoration: none;
     color:#F8EEE7;
+}
+footer .menu a:hover {
+    color: #F3933D;
 }
 footer .copyright {
     grid-column: 1/2;

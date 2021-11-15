@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-	background: linear-gradient(to bottom, #F4DECB 15%, #fff 0%);
+	/*background: linear-gradient(to bottom, #49274A 15%, #fff 0%);*/
 }
 .logo {
     font-family: 'Lobster', cursive;
@@ -28,12 +28,12 @@ header nav {
     font-weight: 600;
 }
 .current:link {
-    color: #94618E;
+    color: #EE5135;
     font-weight: 700;
     text-decoration: underline wavy;
 } 
 .current:visited {
-    color: #94618E;
+    color: #EE5135;
     font-weight: 700;
 }
 .current:hover {
