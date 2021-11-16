@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Lobster&display=swap');
-
 body {
     margin: 0;
+}
+main {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo {
     font-family: 'Lobster', cursive;
@@ -141,6 +145,8 @@ img {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 15px;
+    align-items: center;
+    padding: 0 20px;
 }
 .final {
     display: grid;
@@ -244,7 +250,7 @@ footer {
     background-color: #49274A;
     padding: 50px 250px;
     padding-bottom: 70px;
-    color: #F4DECB;
+    color: #F8EEE7;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;
