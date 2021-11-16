@@ -12,6 +12,7 @@ main {
 .logo {
     font-family: 'Lobster', cursive;
     font-size: 2em;
+    text-transform: none;
 }
 header {
     color: #181818;
@@ -192,11 +193,10 @@ main a:active {
     color: #F3933D;
     text-decoration: none;
 }
-div h4 {
+main div h4 {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 400;
-    
     text-align: center;
 }
 hr {
@@ -312,6 +312,9 @@ footer .copyright {
 
 /* Mobile */
 @media (max-width: 550px) {
+    body {
+        overflow-x: hidden;
+    }
     .lrg-menu {
         display: none;
     }

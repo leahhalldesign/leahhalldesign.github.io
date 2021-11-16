@@ -14,12 +14,13 @@ main {
     font-size: 2em;
 }
 header {
+    color: #181818;
+}
+header div {
     width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0px;
-    color: #181818;
-    /*background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);*/
 }
 header h4 {
     display: inline;
@@ -133,11 +134,11 @@ footer {
     color: #F8EEE7;
 }
 footer section {
+    padding-top: 50px;
+    padding-bottom: 70px;
     width: 900px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;
@@ -180,23 +181,43 @@ footer .copyright {
 }
 
 /* Mobile */
-@media (max-width: 430px) {
+@media (max-width: 550px) {
+    body {
+        overflow-x: hidden;
+    }
     .lrg-menu {
         display: none;
     }
     header {
-        padding: 20px 0px;
-        width: 80%;
+        margin: 0px 20px;
+        background: none;
+        margin-bottom: -50px;
+    }
+    header .logo {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding-top: 20px;
+    }
+    header div {
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
-    
+    header nav {
+        float: none; 
+        text-align: center;
+    }
     header nav ul{
         font-size: 1.25em;
-        display: block;
+        padding-left: 0px;
     }
     header nav ul li {
-        display: block;
+        display: inline;
+        padding-left: 0;
+    }
+    header nav .current {
+        padding-left: 20px;
     }
     main {
         padding: 10px 0px;
@@ -204,30 +225,40 @@ footer .copyright {
         margin-left:auto;
         margin-right: auto;
     }
-    .body {
-        margin-top: 100px;
+    .intro {
+        text-align: center;
     }
-    footer {
+    .intro h1 {
+        font-size: 4em;
+    }
+    .body {
+        margin-top: 120px;
+    }
+    footer section {
         display: block;
+        padding-left: 50px;
     }
     footer .logo {
+        margin-bottom: 40px;
+    }
+    footer .menu {
         margin-bottom: 20px;
     }
     footer .logo, footer div {
         width: 400px;
-        margin-left: auto;
-        margin-left: auto;
     }
 }
 
 /* Small Tablets */
-@media (min-width: 431px) and (max-width: 700px) {
+@media (min-width: 550px) and (max-width: 700px) {
     .lrg-menu {
         display: none;
     }
     header {
-        padding: 20px 0px;
-        width: 80%;
+        margin: 0px 50px;
+    }
+    header div {
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -238,17 +269,19 @@ footer .copyright {
     .body {
         margin-top: 150px;
     }
-    footer {
+    footer section {
         display: block;
-        padding: 50px 25px;
+        padding-left: 50px;
+        width: 90%;
     }
     footer .logo {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+    }
+    footer .menu {
+        margin-bottom: 40px;
     }
     footer .logo, footer div {
         width: 400px;
-        margin-left: auto;
-        margin-left: auto;
     }
 }
 
@@ -258,10 +291,10 @@ footer .copyright {
         display: none;
     }
     header {
-        width: 600px;
-        padding: 20px 0px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0px 50px;
+    }
+    header div {
+        width: 100%;
     }
     main {
         padding: 10px 100px;
@@ -271,13 +304,6 @@ footer .copyright {
     }
     footer {
         display: block;
-    }
-    footer .logo, footer div {
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    footer .logo {
-        margin-bottom: 20px;
+        padding-left: 50px;
     }
 }

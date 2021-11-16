@@ -274,6 +274,9 @@ footer .copyright {
     }
 }
 @media (max-width: 550px) {
+    body {
+        overflow-x: hidden;
+    }
     .lrg-menu {
         display: none;
     }
