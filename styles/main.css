@@ -264,12 +264,12 @@ footer .copyright {
 
 /* Mobile */
 @media (max-width: 443px) {
-    main h4 {
+    main {
         margin-top: 220px;
     }
 }
 @media (min-width: 444px) and (max-width: 550px) {
-    main h4 {
+    main {
         margin-top: 170px;
     }
 }
@@ -312,7 +312,6 @@ footer .copyright {
     header p {
         padding-bottom: 0;
         margin-bottom: 0px;
-        font-size: 1em;
     }
     header nav {
         float: none; 
@@ -348,7 +347,6 @@ footer .copyright {
         width: 100%;
         position: relative;
         margin-left: 0px;
-        text-decoration: underline;
     }
     .sticker {
         padding-bottom: 20px;
