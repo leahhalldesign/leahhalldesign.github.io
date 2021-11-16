@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    min-width: 400px;
 }
 main {
     max-width: 1400px;
@@ -20,7 +21,7 @@ header {
     background-position: right 20px;
     height: 620px;
     color: #181818;
-    margin-right: 100px;
+    margin: 0px 100px;
 }
 header div {
     width: 900px;
@@ -105,7 +106,9 @@ header p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
 }
-
+header img {
+    display: none;
+}
 
 main {
     width: 900px;
@@ -159,7 +162,7 @@ main h4 {
 }
 .gallery img {
     background-color: #94618e1c;
-    width:100%;
+    width: 100%;
     object-fit:cover;
     height: 350px;  
     transition: 0.25s all ease-in-out; 
@@ -260,27 +263,68 @@ footer .copyright {
 
 
 /* Mobile */
+@media (max-width: 443px) {
+    main h4 {
+        margin-top: 220px;
+    }
+}
+@media (min-width: 444px) and (max-width: 550px) {
+    main h4 {
+        margin-top: 170px;
+    }
+}
 @media (max-width: 550px) {
     .lrg-menu {
         display: none;
     }
     header {
-        padding: 10px 0px;
+        margin: 0px 20px;
+        background: none;
+        margin-bottom: -50px;
+    }
+    header .logo {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding-top: 20px;
     }
     header div {
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
-    header p {
+    header img {
+        display: block;
         width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    header h1, header h2, header p {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    header p {
+        padding-bottom: 0;
+        margin-bottom: 0px;
+        font-size: 1em;
+    }
+    header nav {
+        float: none; 
+        text-align: center;
     }
     header nav ul{
         font-size: 1.25em;
-        display: block;
+        padding-left: 0px;
     }
     header nav ul li {
-        display: block;
+        display: inline;
+        padding-left: 0;
+    }
+    header nav .current {
+        padding-right: 20px;
     }
     
     main {
@@ -288,9 +332,6 @@ footer .copyright {
         width: 80%;
         margin-left:auto;
         margin-right: auto;
-    }
-    main h4 {
-        margin-top: 50px;
     }
     .gallery {
         display: block;
@@ -304,42 +345,59 @@ footer .copyright {
         width: 100%;
         position: relative;
         margin-left: 0px;
+        text-decoration: underline;
     }
     .sticker {
         padding-bottom: 20px;
     }
-    footer {
+    footer section {
         display: block;
-        padding: 50px 25px;
+        padding-left: 50px;
     }
     footer .logo {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+    }
+    footer .menu {
+        margin-bottom: 40px;
     }
     footer .logo, footer div {
         width: 400px;
-        margin-left: auto;
-        margin-left: auto;
     }
 }
 
 /* Small Tablets */
-@media (min-width: 551px) and (max-width: 700px) {
+@media (min-width: 551px) and (max-width: 920px) {
     .lrg-menu {
         display: none;
     }
     header {
-        padding: 20px 0px;
+        background-size: 217px 225px;
+        background-position: center 0px;
+        margin: 0px 50px;
+        margin-bottom: -20px;
     }
     header div {
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
+    header h1 {
+        margin-top: 100px;
+    }
+    header h1, header h2, header p {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header h1 {
+        font-size: 4em;
+    }
     header p {
-        width: 70%;
+        width: 80%;
     }
     main {
-        padding: 10px 0px;
+        padding: 0px 0px;
         width: 90%;
         margin-left:auto;
         margin-right:auto;
@@ -351,51 +409,52 @@ footer .copyright {
     .gallery .lrg h3 {
         width: 45%;
     }
-    footer {
+    footer section {
         display: block;
-        padding: 50px 25px;
+        padding-left: 50px;
+        width: 90%;
     }
     footer .logo {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+    }
+    footer .menu {
+        margin-bottom: 40px;
     }
     footer .logo, footer div {
         width: 400px;
-        margin-left: auto;
-        margin-left: auto;
     }
 }
 
 /* Small Desktops */
-@media (min-width: 701px) and (max-width: 1100px) {
+@media (min-width: 921px) and (max-width: 1100px) {
     header {
-        background-size: 481px 500px;
+        background-size: 481px 80%;
         background-position: right 30px;
-        padding: 0px 50px;
+        margin: 0px 50px;
     }
     header h1, header h2 {
-        width: 70%;
-        padding-top: 10px;
+        width: 100%;
+        padding-top: 20px;
+    }
+    header div {
+        width: 100%;
     }
     header p {
         width: 50%;
+        padding-bottom: 0;
     }
     main {
-        padding: 10px 0px;
-        width: 80%;
-        margin-left:auto;
-        margin-right:auto;
+        width: 90%;
+        margin: 0px 50px;
     }
     footer {
         display: block;
         padding-left: 50px;
     }
-    footer .logo {
-        margin-bottom: 20px;
-    }
+    
 }
-
 @media (min-width: 1101px) and (max-width:1180px) {
     header {
-        margin-right: 50px;
+        margin: 0px 50px;
     }
 }

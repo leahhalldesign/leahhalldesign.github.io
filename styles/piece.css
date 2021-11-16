@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    min-width: 400px;
 }
 main {
     max-width: 1400px;
@@ -13,11 +14,13 @@ main {
     font-size: 2em;
 }
 header {
+    color: #181818;
+}
+header div {
     width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0px;
-    color: #181818;
 }
 header h4 {
     display: inline;
@@ -76,8 +79,6 @@ main {
     margin-bottom: 100px;
 }
 main h1 {
-    padding: 0px 250px;
-    width: 700px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -210,6 +211,7 @@ hr {
     text-align: center;
     font-size: 1.25em;
 }
+
 .projects h4 a {
     font-size: 1em;
     text-decoration: underline;
@@ -259,11 +261,16 @@ footer {
     font-family: 'Open Sans', sans-serif;
     font-size: .9em;
     background-color: #49274A;
-    padding: 50px 250px;
-    padding-bottom: 70px;
     color: #F8EEE7;
+}
+footer section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 400px 200px;
     grid-template-rows: 100px 1fr;
 }
 footer h2 {
@@ -275,6 +282,7 @@ footer .logo {
     grid-column: 1/2;
     font-size: 2.5em;
     margin: 0;
+    padding-bottom: 20px;
 }
 footer .logo a {
     text-decoration: none;
@@ -282,6 +290,7 @@ footer .logo a {
 }
 footer .menu {
     grid-column: 2/3;
+    padding-bottom: 20px;
 }
 footer .menu ul{
     list-style-type: none;
@@ -302,25 +311,40 @@ footer .copyright {
 
 
 /* Mobile */
-@media (max-width: 470px) {
+@media (max-width: 550px) {
     .lrg-menu {
         display: none;
     }
     header {
-        padding: 20px 0px;
+        margin: 0px 20px;
+        background: none;
+        margin-bottom: -50px;
+    }
+    header .logo {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding-top: 20px;
     }
     header div {
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
+    header nav {
+        float: none; 
+        text-align: center;
+    }
     header nav ul{
-        margin-top: -10px;
         font-size: 1.25em;
-        display: block;
+        padding-left: 0px;
     }
     header nav ul li {
-        display: block;
+        display: inline;
+        padding-left: 0;
+    }
+    header nav .current {
+        padding-right: 20px;
     }
     main {
         padding: 10px 0px;
@@ -329,7 +353,14 @@ footer .copyright {
         margin-right: auto;
     }
     main h1 {
-        width: 80%;
+        padding: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    main h2, main h3, main h4, main p, main ol, main ul {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     main p, main ol, main ul {
         width: 90%;
@@ -367,33 +398,28 @@ footer .copyright {
     .project-group img {
         display: none;
     }
-    footer {
+    footer section { 
         display: block;
-        padding: 50px 25px;
-    }
-    footer .logo {
-        margin-bottom: 20px;
-    }
-    footer .logo, footer div {
-        width: 400px;
-        margin-left: auto;
-        margin-left: auto;
+        padding-left: 50px;
     }
 }
 
 /* Small Tablets */
-@media (min-width: 471px) and (max-width: 700px) {
+@media (min-width: 551px) and (max-width: 770px) {
     .lrg-menu {
         display: none;
     }
     main h1 {
-        width: 80%;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     header {
-        padding: 20px 0px;
+        margin: 0px 50px;
     }
     header div {
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -402,6 +428,11 @@ footer .copyright {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+    }
+    main h1 {
+        padding: 0;
+        margin-right: 0;
+        
     }
     main p, main ol, main ul {
         width: 90%;
@@ -441,38 +472,39 @@ footer .copyright {
     .project-group img {
         width: 80%;
     }
-    footer {
+    footer section {
         display: block;
-        padding: 50px 25px;
+        padding-left: 50px;
+        width: 90%;
     }
     footer .logo {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+    }
+    footer .menu {
+        margin-bottom: 40px;
     }
     footer .logo, footer div {
         width: 400px;
-        margin-left: auto;
-        margin-left: auto;
     }
 }
 
 /* Small Desktops */
-@media (min-width: 701px) and (max-width: 1120px) {
-    .lrg-menu {
-        display: none;
-    }
+@media (min-width: 771px) and (max-width: 1120px) {
     header {
-        padding: 20px 0px; 
+        margin: 0px 50px;
     }
     header div {
-        width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
     }
     main {
         padding: 10px 0px;
         width: 600px;
         margin-left: auto;
         margin-right: auto;
+    }
+    main h1 {
+        padding: 0;
+        margin-right: 0;
     }
     .header-img, .header-img2, .single-img, .small-img, .sketches {
         width: 100%;
@@ -505,9 +537,9 @@ footer .copyright {
         flex-direction: column;
     }
     footer {
-        display: block;
+        padding-left: 50px;
     }
-    footer .logo {
-        margin-bottom: 20px;
+    footer section {
+        width: 600px;
     }
 }
