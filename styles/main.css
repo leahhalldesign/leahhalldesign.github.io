@@ -2,7 +2,11 @@
 
 body {
     margin: 0;
+}
+main {
     max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo {
     font-family: 'Lobster', cursive;
@@ -15,12 +19,14 @@ header {
     background-size: 578px 600px;
     background-position: right 20px;
     height: 620px;
-    margin-right: 100px;
     color: #181818;
+    margin-right: 100px;
 }
 header div {
-    padding: 20px 150px;
-    padding-left: 250px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
 }
 header h4 {
     display: inline;
@@ -102,8 +108,10 @@ header p {
 
 
 main {
-    padding: 10px 250px;
-    
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
 }
 main h2 {
     font-family: 'Open Sans', sans-serif;
@@ -201,9 +209,14 @@ footer {
     font-family: 'Open Sans', sans-serif;
     font-size: .9em;
     background-color: #49274A;
-    padding: 50px 250px;
-    padding-bottom: 70px;
     color: #F8EEE7;
+}
+footer section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;
@@ -353,20 +366,18 @@ footer .copyright {
 }
 
 /* Small Desktops */
-@media (min-width: 701px) and (max-width: 1120px) {
-    .lrg-menu {
-        display: none;
-    }
+@media (min-width: 701px) and (max-width: 1100px) {
     header {
-        padding: 20px 0px;
+        background-size: 481px 500px;
+        background-position: right 30px;
+        padding: 0px 50px;
     }
-    header div {
-        width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+    header h1, header h2 {
+        width: 70%;
+        padding-top: 10px;
     }
     header p {
-        width: 70%;
+        width: 50%;
     }
     main {
         padding: 10px 0px;
@@ -376,8 +387,15 @@ footer .copyright {
     }
     footer {
         display: block;
+        padding-left: 50px;
     }
     footer .logo {
         margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1101px) and (max-width:1180px) {
+    header {
+        margin-right: 50px;
     }
 }

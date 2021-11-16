@@ -2,15 +2,21 @@
 
 body {
     margin: 0;
+}
+main {
     max-width: 1400px;
-	/*background: linear-gradient(to bottom, #94618E 15%, #fff 20%);*/
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo {
     font-family: 'Lobster', cursive;
     font-size: 2em;
 }
 header {
-    padding: 20px 250px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
     color: #181818;
     /*background-image: linear-gradient(to bottom right, #94618E , #49274A 90%);*/
 }
@@ -119,14 +125,18 @@ main img {
 	margin-bottom: 125px;
 }
 
-
 footer {
     font-family: 'Open Sans', sans-serif;
     font-size: .9em;
     background-color: #49274A;
-    padding: 50px 250px;
-    padding-bottom: 70px;
     color: #F8EEE7;
+}
+footer section {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;

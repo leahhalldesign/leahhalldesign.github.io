@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Lobster&display=swap');
+
 body {
     margin: 0;
 }
@@ -12,17 +13,18 @@ main {
     font-size: 2em;
 }
 header {
-    background-color: #94618E;
-    padding: 20px 250px;
-    height: 90%;
-    color: #F8EEE7;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+    color: #181818;
 }
 header h4 {
     display: inline;
 }
 header h4 a {
     text-decoration: none;
-    color:#F8EEE7;
+    color:#181818;
 }
 header nav {
     margin-top: 10px;
@@ -32,19 +34,19 @@ header nav {
     font-weight: 600;
 }
 .current:link {
-    color: #FEDB47;
+    color: #EE5135;
     font-weight: 700;
     text-decoration: underline wavy;
 } 
 .current:visited {
-    color: #FEDB47;
+    color: #EE5135;
     font-weight: 700;
 }
 .current:hover {
     text-decoration: underline wavy;
 }
 .current:active {
-    color: #F8EEE7;
+    color: #181818;
 }
 header nav ul {
     display: inline;
@@ -56,16 +58,16 @@ header nav ul li {
 }
 header nav ul li a:link {
     text-decoration: none;
-    color: #F8EEE7;
+    color: #181818;
 }
 header nav ul li a:visited {
-    color: #F8EEE7;
+    color: #181818;
 }
 header nav ul li a:hover {
     text-decoration: underline wavy;
 }
 header nav ul li a:active {
-    color: #F8EEE7;
+    color: #181818;
 }
 
 main {
@@ -74,9 +76,11 @@ main {
     margin-bottom: 100px;
 }
 main h1 {
+    padding: 0px 250px;
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 main h2, main h3, main h4, main p, main ol, main ul {
     width: 500px;
@@ -88,7 +92,7 @@ main h1 {
 }
 main h2 {
     margin-top: 50px;
-    color: #9e9d9d;
+    color: #959797;
     font-size: 1.75em;
 }
 main h3 {
@@ -104,7 +108,7 @@ img {
     width: 100%;
 }
 .shadow img {
-    box-shadow: 0px 0px 10px #9e9d9d;
+    box-shadow: 0px 0px 10px #959797;
 }
 .header-img {
     object-fit:cover;
@@ -181,10 +185,10 @@ main a:visited {
     color: #181818;
 }
 main a:hover {
-    color: #94618E;
+    color: #F3933D;
 }
 main a:active {
-    color: #94618E;
+    color: #F3933D;
     text-decoration: none;
 }
 div h4 {
@@ -206,6 +210,13 @@ hr {
     text-align: center;
     font-size: 1.25em;
 }
+.projects h4 a {
+    font-size: 1em;
+    text-decoration: underline;
+}
+.projects h4 a:hover {
+    color: #F3933D;
+}
 .projects a p {
     padding: 0px 10px;
 }
@@ -218,14 +229,14 @@ hr {
     padding-top: 10px;
     padding-bottom: 20px;
     transition: 0.25s all ease-in-out;
-    box-shadow: 0px 0px 10px #9e9d9d;
+    box-shadow: 0px 0px 10px #959797;
     margin: 30px;
     text-align: center;
 }
 .project-group div:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px #9e9d9d;
-    background-color: #eeeeee;
+    box-shadow: 0px 0px 10px #959797;
+    background-color: #9DD6CB;
 }
 .projects img {
     object-fit: cover;
@@ -264,6 +275,10 @@ footer .logo {
     grid-column: 1/2;
     font-size: 2.5em;
     margin: 0;
+}
+footer .logo a {
+    text-decoration: none;
+    color: #F8EEE7;
 }
 footer .menu {
     grid-column: 2/3;
