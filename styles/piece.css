@@ -303,6 +303,9 @@ footer .menu a {
     text-decoration: none;
     color:#F8EEE7;
 }
+footer .menu a:hover {
+    color: #F3933D;
+}
 footer .copyright {
     grid-column: 1/2;
     font-size: .9em;
