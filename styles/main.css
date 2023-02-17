@@ -214,13 +214,13 @@ button.explore:hover {
 .gallery .row2 {
     width: 45%;
     margin-bottom: 75px;
+    padding-bottom: 100px;
 }
 .gallery .row3 {
     width: 30%;
     margin-bottom: 100px;
 }
 .gallery img, .display img {
-    background-color: #94618e1c;
     width: 100%;
     object-fit:cover; 
     transition: 0.25s all ease-in-out; 
@@ -242,38 +242,111 @@ button.explore:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 10px #959797;
 }
+.blue {
+    background-color: #A1D4CA;
+}
+.orange {
+    background-color:#F3933D;
+}
+.red {
+    background-color: #EE5135;
+}
+.purp {
+    background-color: #91638C;
+}
 .books {
     padding: 0px;
     margin-bottom: 50px;
 }
-
 .book-pics {
     position: relative;
     display: flex;
     align-items: center;
     overflow: auto;
     white-space: nowrap;
-    box-shadow: 10px 10px 10px #959797;
+    box-shadow: 0px 5px 10px #959797;
+    margin-left: -120px;
+    margin-right: -120px;
 }
-.books img {
-    width: 200px;
-    padding: 10px;
+.book-pics img {
+    height: 300px;
+    padding: 0px 10px;
 }
-footer {
-    font-family: 'Open Sans', sans-serif;
-    font-size: .9em;
-    background-color: #49274A;
-    color: #F8EEE7;
+.book-pics::-webkit-scrollbar {
+    height: 10px;
 }
-footer section {
-    padding-top: 50px;
-    padding-bottom: 70px;
-    width: 900px;
+.book-pics::-webkit-scrollbar-thumb {
+    background-color: #EE5135;
+    border-radius: 10px;
+}
+#chat {
+    background-color: #f5f7fa;
+    color: #181818;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr;
+    font-family: 'Work Sans', sans-serif; ;
+    padding: 80px 0px;
+    margin-bottom: -150px;
+    position: relative;
+    outline-style: dotted;
+    outline-color: #181818;
+    outline-width: 4px;
+    outline-offset: 5px;
+}
+#chat h1 {
+    font-size: 44px;
+    font-weight: 400;
+    padding: 20px 0px;
+    margin-bottom: 0;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#chat p {
+    width: 70%;
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 24px;
+}
+#chat button {
+    width: 250px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 10px 24px;
+    border-style: solid;
+    border-color: #32343a;
+    border-width: 0.75px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#chat button:hover {
+    background-color: #181818;
+    color: white;
+}
+footer {
+    font-family: 'Work Sans', sans-serif;
+    font-size: .9em;
+    background-color: #181818;
+    color: #F8EEE7;
+    margin-left: -120px;
+    margin-right: -120px;
+}
+footer section {
+    padding-top: 200px;
+    padding-bottom: 20px;
+    max-width: 1500px;
+    display: flex;
+    justify-content:space-between;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 footer h2 {
     margin-bottom: 0px;
@@ -281,7 +354,6 @@ footer h2 {
     font-size: 1em;
 }
 footer .logo {
-    grid-column: 1/2;
     font-size: 2.5em;
     margin: 0;
 }
@@ -289,15 +361,16 @@ footer .logo a {
     text-decoration: none;
     color: #F8EEE7;
 }
-footer .menu {
-    grid-column: 2/3;
-}
 footer .menu ul{
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 footer .menu ul li {
-    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size:18px;
+    font-weight:400;
 }
 footer .menu a {
     text-decoration: none;
@@ -306,10 +379,13 @@ footer .menu a {
 footer .menu a:hover {
     color: #F3933D;
 }
+footer hr {
+    color: white;
+}
 footer .copyright {
-    grid-column: 1/2;
     font-size: .9em;
     color: #F8EEE7;
+    padding: 40px 150px; 
 }
 
 
