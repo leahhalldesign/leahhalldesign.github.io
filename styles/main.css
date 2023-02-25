@@ -149,30 +149,27 @@ main h4 {
     flex-direction:row;
     align-items: center;
     margin-bottom: 75px;
+    background-color: white;
+}
+a.lrg.flip {
+    flex-direction:row-reverse;
+}
+.display .lrg:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px #959797;
 }
 .display .lrg h3 {
-    width: 60%;
-    height: 80%;
+    width: 35%;
+    height: 100%;
     position: relative;
-    background-color: white;
+    margin: 0px;
     padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 80px;
-    padding-top: 10px;
-    margin-left: -70px;
-    outline-style: dotted;
-    outline-color: #181818;
-    outline-width: 4px;
-    outline-offset: 5px;
-}
-.display .lrg .lefttext {
-    margin-left: 0px;
-    margin-right: -70px;
 }
 .display .lrg img {
     width: 60%;
     height: 100%;
 }
+
 button.explore {
     display: flex;
     position: absolute;
@@ -264,13 +261,13 @@ button.explore:hover {
     align-items: center;
     overflow: auto;
     white-space: nowrap;
-    box-shadow: 0px 5px 10px #959797;
     margin-left: -120px;
     margin-right: -120px;
 }
 .book-pics img {
     height: 300px;
-    padding: 0px 10px;
+    margin: 0px 10px;
+    box-shadow: 0px 5px 10px #959797;
 }
 .book-pics::-webkit-scrollbar {
     height: 10px;
@@ -285,7 +282,7 @@ button.explore:hover {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Work Sans', sans-serif; ;
+    font-family: 'Work Sans', sans-serif;
     padding: 80px 0px;
     margin-bottom: -150px;
     position: relative;
@@ -312,22 +309,27 @@ button.explore:hover {
     margin-right: auto;
     padding-bottom: 24px;
 }
-#chat button {
+#chat .button{
     width: 250px;
     display: flex;
     background-color: white;
+    color:#181818;
     justify-content: space-between;
     align-items: center;
     text-align: left;
     padding: 10px 24px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
     border-style: solid;
     border-color: #32343a;
     border-width: 0.75px;
     font-size: 14px;
     margin-left: auto;
     margin-right: auto;
+    text-decoration: none;
 }
-#chat button:hover {
+
+#chat .button:hover{
     background-color: #181818;
     color: white;
 }
