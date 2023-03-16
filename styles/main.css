@@ -250,14 +250,23 @@ button.explore:hover {
     background-color:#F3933D;
 }
 .red {
-    background-color: #EE5135;
+    background-color: #ee5135d5;
 }
 .purp {
     background-color: #91638C;
 }
+.mbm {
+    background-color: rgba(28, 99, 218, 0.6);
+}
+.cc {
+    background-color: #176DB4;
+}
+.acmrs {
+    background-color: #12B2E5;
+}
 .books {
     padding: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .book-pics {
     position: relative;

@@ -75,6 +75,9 @@ header nav ul li a:hover {
 header nav ul li a:active {
     color: #181818;
 }
+.cc {
+    background-color: #176DB4;
+}
 h1 {
 	margin-left: 25px;
 	color: #0c2431

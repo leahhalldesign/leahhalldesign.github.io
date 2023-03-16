@@ -102,6 +102,12 @@ main h2 {
 main h3 {
     margin-top: 30px;
 }
+.cc {
+    background-color: #176DB4;
+}
+.red {
+    background-color: #EE5135;
+}
 figcaption {
     text-align: center;
     margin-top: -40px;
@@ -207,6 +213,7 @@ hr {
 .projects {
     color: #181818;
     padding-top: 20px;
+    margin-bottom: 50px;
 }
 .projects a {
     text-decoration: none;
@@ -223,6 +230,7 @@ hr {
 }
 .projects a p {
     padding: 0px 10px;
+    font-size: 0.75em;
 }
 .projects a:hover {
     color: #181818;
@@ -240,7 +248,6 @@ hr {
 .project-group div:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 10px #959797;
-    background-color: #9DD6CB;
 }
 .projects img {
     object-fit: cover;
@@ -252,7 +259,6 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
 
 
